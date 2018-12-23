@@ -10,17 +10,20 @@ public class Player : MonoBehaviour
     [Tooltip("In m")] [SerializeField] float xRange = 6.5f;
     [Tooltip("In m")] [SerializeField] float yRange = 4f;
 
+    [SerializeField] float positionPitchFactor = -10f;
+    [SerializeField] float positionYawFactor = -2f;
+    [SerializeField] float positionRollFactor = 5f;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    [SerializeField] float controlPitchFactor = -5f;
+    [SerializeField] float controlRollFactor = -30f;
+    float xThrow;
+    float yThrow;
 
     // Update is called once per frame
     void Update()
     {
         CalculatePlayerLocation();
+        CalculatePlayerRotation();
     }
 
     void CalculatePlayerLocation()
@@ -30,21 +33,30 @@ public class Player : MonoBehaviour
     }
     void CalculateXPosition()
     {
-        float xThrow = CrossPlatformInputManager.GetAxis("Horizontal");
-        float xOffset = xThrow * xSpeed * Time.deltaTime;
-        float rawXPos = transform.localPosition.x + xOffset;
-        float clampedXPos = Mathf.Clamp(rawXPos, -xRange, xRange);
+        xThrow = CrossPlatformInputManager.GetAxis("Horizontal"); //Gets Horizontal input from player
+        float xOffset = xThrow * xSpeed * Time.deltaTime; //figures out the speed of change per frame
+        float rawXPos = transform.localPosition.x + xOffset; // figures out where the player should be after applying the offset
+        float clampedXPos = Mathf.Clamp(rawXPos, -xRange, xRange); // makes sure the player doesn't fly off the screen
 
-        transform.localPosition = new Vector3(clampedXPos, transform.localPosition.y, transform.localPosition.z);
+        transform.localPosition = new Vector3(clampedXPos, transform.localPosition.y, transform.localPosition.z); //moves the player
     }
 
     void CalculateYPosition()
     {
-        float yThrow = CrossPlatformInputManager.GetAxis("Vertical");
+        yThrow = CrossPlatformInputManager.GetAxis("Vertical");
         float yOffset = yThrow * ySpeed * Time.deltaTime;
         float rawYPos = transform.localPosition.y + yOffset;
         float clampedYPos = Mathf.Clamp(rawYPos, -yRange, yRange);
 
         transform.localPosition = new Vector3(transform.localPosition.x, clampedYPos, transform.localPosition.z);
+    }
+
+    void CalculatePlayerRotation()
+    {
+        float pitch = transform.localPosition.y * positionPitchFactor + yThrow * controlPitchFactor;
+        float yaw = transform.localPosition.x * positionYawFactor;
+        float roll = xThrow * controlRollFactor;
+
+        transform.localRotation = Quaternion.Euler(pitch, yaw, roll);
     }
 }

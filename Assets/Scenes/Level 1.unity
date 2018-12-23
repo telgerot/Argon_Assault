@@ -338,7 +338,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   circuit: {fileID: 1541760301}
-  lookAheadForTargetOffset: 5
+  lookAheadForTargetOffset: 1
   lookAheadForTargetFactor: 0.1
   lookAheadForSpeedOffset: 10
   lookAheadForSpeedFactor: 0.2
@@ -620,7 +620,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   xSpeed: 20
+  ySpeed: 15
   xRange: 6.5
+  yRange: 4
+  positionPitchFactor: -7.5
+  positionYawFactor: 5
+  positionRollFactor: 5
+  controlPitchFactor: -10
+  controlRollFactor: -30
 --- !u!1 &1853538344
 GameObject:
   m_ObjectHideFlags: 0
@@ -805,12 +812,12 @@ PrefabInstance:
     - target: {fileID: 154129183798656167, guid: 8604157a9191cf14991319c621ece798,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 6.5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 154129183798656167, guid: 8604157a9191cf14991319c621ece798,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -2
       objectReference: {fileID: 0}
     - target: {fileID: 154129183798656167, guid: 8604157a9191cf14991319c621ece798,
         type: 3}
