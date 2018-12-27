@@ -5,17 +5,17 @@ using UnityStandardAssets.CrossPlatformInput;
 
 public class Player : MonoBehaviour
 {
-    [Tooltip("In ms^-1")][SerializeField] float xSpeed = 4f;
-    [Tooltip("In ms^-1")] [SerializeField] float ySpeed = 4f;
-    [Tooltip("In m")] [SerializeField] float xRange = 6.5f;
-    [Tooltip("In m")] [SerializeField] float yRange = 4f;
+    [Tooltip("In ms^-1")][SerializeField] float xSpeed = 10f;
+    [Tooltip("In ms^-1")] [SerializeField] float ySpeed = 10f;
+    [Tooltip("In m")] [SerializeField] float xRange = 4f;
+    [Tooltip("In m")] [SerializeField] float yRange = 3f;
 
-    [SerializeField] float positionPitchFactor = -10f;
-    [SerializeField] float positionYawFactor = -2f;
+    [SerializeField] float positionPitchFactor = -2.5f;
+    [SerializeField] float positionYawFactor = 3.5f;
     [SerializeField] float positionRollFactor = 5f;
 
     [SerializeField] float controlPitchFactor = -5f;
-    [SerializeField] float controlRollFactor = -30f;
+    [SerializeField] float controlRollFactor = -45f;
     float xThrow;
     float yThrow;
 
@@ -24,6 +24,10 @@ public class Player : MonoBehaviour
     {
         CalculatePlayerLocation();
         CalculatePlayerRotation();
+    }
+    private void OnTriggerEnter(Collider other)
+    {
+        print("Player triggered something");
     }
 
     void CalculatePlayerLocation()
