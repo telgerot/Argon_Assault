@@ -540,6 +540,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70852dc981465ea48bb527b9e33a87fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1590636194 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8509804229234574642, guid: 25d7b5b1d393e484a982babf385093b1,
+    type: 3}
+  m_PrefabInstance: {fileID: 636481774695326474}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1590636197
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1590636194}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f586cceae865bc643be7db8db0920ed0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &1814173922 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5344960542625762442, guid: af74e53f7d798b846a3bf62b2ba0b460,
@@ -563,7 +581,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &2125615347
 Transform:
@@ -891,6 +909,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.z
       value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 3586061899695250316, guid: 25d7b5b1d393e484a982babf385093b1,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5385573516405537991, guid: 25d7b5b1d393e484a982babf385093b1,
         type: 3}
@@ -1345,6 +1368,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Environmental Obstacles
       objectReference: {fileID: 0}
+    - target: {fileID: 9107809291962298262, guid: 886d5340ae6aa10408c5cdd918df0ce9,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 9107809291962298261, guid: 886d5340ae6aa10408c5cdd918df0ce9,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1404,6 +1432,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Obstacle
+      objectReference: {fileID: 0}
+    - target: {fileID: 9107809292709797119, guid: 886d5340ae6aa10408c5cdd918df0ce9,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 9107809292709797116, guid: 886d5340ae6aa10408c5cdd918df0ce9,
         type: 3}
