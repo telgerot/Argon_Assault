@@ -68,7 +68,7 @@ public class PlayerController : MonoBehaviour
 
     void OnPlayerDeath()
     {
-        print("Movement stopped");
+        print("Movement stopped"); //This is a string-referenced message from CollisionHandler when player hits something
         controlsFrozen = true;
     }
 }
