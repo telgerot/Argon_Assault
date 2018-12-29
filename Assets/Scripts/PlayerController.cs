@@ -70,5 +70,6 @@ public class PlayerController : MonoBehaviour
     {
         print("Movement stopped"); //This is a string-referenced message from CollisionHandler when player hits something
         controlsFrozen = true;
+        FindObjectOfType<ScoreBoard>().ResetScore();
     }
 }

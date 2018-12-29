@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 7225677196243775890}
   - component: {fileID: 8585156087900778083}
   - component: {fileID: 186381050379032050}
-  - component: {fileID: 2422100218702018810}
+  - component: {fileID: 2076818299283213115}
   m_Layer: 0
   m_Name: Enemy Variant 2
   m_TagString: Untagged
@@ -78,16 +78,19 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!65 &2422100218702018810
-BoxCollider:
+--- !u!114 &2076818299283213115
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3185884739778562511}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.64664876, y: 0.6331279, z: 0.091510944}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f9dc70300ae728445b52046b041e24de, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  explosionEffect: {fileID: 3634579205417771052, guid: ba615b4b11ab7ea4b8b66780f30ce0b6,
+    type: 3}
+  parent: {fileID: 5705760489892214000, guid: 051eece6ca2fe124c84136d28d5f7890, type: 3}
+  scoreForKilling: 55
