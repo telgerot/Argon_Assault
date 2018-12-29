@@ -10,6 +10,7 @@ public class PlayerController : MonoBehaviour
     [Tooltip("In ms^-1")] [SerializeField] float ySpeed = 10f;
     [Tooltip("In m")] [SerializeField] float xRange = 4f;
     [Tooltip("In m")] [SerializeField] float yRange = 3f;
+    [SerializeField] GameObject[] guns;
 
     [Header("Screen Position-related Movement Config")]
     [SerializeField] float positionPitchFactor = -2.5f;
@@ -29,6 +30,7 @@ public class PlayerController : MonoBehaviour
         {
             CalculatePlayerLocation();
             CalculatePlayerRotation();
+            ProcessFiring();
         }
     }
 
@@ -71,5 +73,33 @@ public class PlayerController : MonoBehaviour
         print("Movement stopped"); //This is a string-referenced message from CollisionHandler when player hits something
         controlsFrozen = true;
         FindObjectOfType<ScoreBoard>().ResetScore();
+    }
+
+    private void ProcessFiring()
+    {
+        if (CrossPlatformInputManager.GetButton("Fire1"))
+        {
+            ActivateGuns();
+        }
+        else
+        {
+            DeactivateGuns();
+        }
+    }
+
+    private void ActivateGuns()
+    {
+        foreach (GameObject gun in guns)
+        {
+            gun.SetActive(true);
+        }
+    }
+
+    private void DeactivateGuns()
+    {
+        foreach (GameObject gun in guns)
+        {
+            gun.SetActive(false);
+        }
     }
 }
