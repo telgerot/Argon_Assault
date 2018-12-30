@@ -6,7 +6,8 @@ public class Enemy : MonoBehaviour
 {
     [SerializeField] GameObject explosionEffect;
     [SerializeField] Transform parent;
-    [SerializeField] int scoreForKilling; 
+    [SerializeField] int scoreForKilling;
+    [SerializeField] int hits = 1;
     ScoreBoard scoreBoard;  
 
 
@@ -26,7 +27,11 @@ public class Enemy : MonoBehaviour
     private void OnParticleCollision(GameObject other)
     {
         print("Particles collided with enemy" + gameObject.name);
-        DestroyEnemy();
+        hits--;
+        if (hits <= 1)
+        {
+            DestroyEnemy();
+        }
     }
 
     private void DestroyEnemy()
