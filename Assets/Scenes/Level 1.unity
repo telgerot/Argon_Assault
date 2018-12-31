@@ -308,7 +308,7 @@ PrefabInstance:
     - target: {fileID: 6625298757782561478, guid: af74e53f7d798b846a3bf62b2ba0b460,
         type: 3}
       propertyPath: m_Name
-      value: Enemy Variant 1 (4)
+      value: Albatross (1)
       objectReference: {fileID: 0}
     - target: {fileID: 5344960542625762442, guid: af74e53f7d798b846a3bf62b2ba0b460,
         type: 3}
@@ -852,6 +852,50 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1192444401}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1832180063 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6625298757782561478, guid: af74e53f7d798b846a3bf62b2ba0b460,
+    type: 3}
+  m_PrefabInstance: {fileID: 541260204}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &1832180064
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1832180063}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!320 &1832180065
+PlayableDirector:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1832180063}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_PlayableAsset: {fileID: 11400000, guid: 1d342d1ec8d1f2b41a20627827d06f1d, type: 2}
+  m_InitialState: 1
+  m_WrapMode: 2
+  m_DirectorUpdateMode: 1
+  m_InitialTime: 0
+  m_SceneBindings:
+  - key: {fileID: 114306598512477104, guid: 1d342d1ec8d1f2b41a20627827d06f1d, type: 2}
+    value: {fileID: 1832180064}
+  m_ExposedReferences:
+    m_References: []
 --- !u!1001 &1883459149
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -862,7 +906,7 @@ PrefabInstance:
     - target: {fileID: 6625298757782561478, guid: af74e53f7d798b846a3bf62b2ba0b460,
         type: 3}
       propertyPath: m_Name
-      value: Enemy Variant 1 (5)
+      value: Albatross (2)
       objectReference: {fileID: 0}
     - target: {fileID: 5344960542625762442, guid: af74e53f7d798b846a3bf62b2ba0b460,
         type: 3}
