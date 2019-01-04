@@ -21,7 +21,13 @@ public class SceneLoader : MonoBehaviour
 
     void Start()
     {
-        RestartLevel();
+        var currentScene = SceneManager.GetActiveScene();
+
+        if (currentScene.name == "Splash")
+        {
+            RestartLevel();
+        }
+
     }
 
     public void RestartLevel() //Why the extra step?  Because CollisionHandler is calling this, and I can't figure out how to call IEnumerator's from outside yet lol
